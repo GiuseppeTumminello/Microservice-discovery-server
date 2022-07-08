@@ -5,6 +5,6 @@ RUN gradle build
 
 FROM openjdk:11-jre-slim
 EXPOSE 8761
-COPY --from=build /home/gradle/src/build/libs/*.jar ./
-ENTRYPOINT ["java", "-jar", "Discovery-server-0.0.1-SNAPSHOT.jar"]
-CMD java $JAVA_OPTIONS -jar Discovery-server-0.0.1-SNAPSHOT.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar ./app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD java $JAVA_OPTIONS -jar app.jar
