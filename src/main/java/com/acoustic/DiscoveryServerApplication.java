@@ -1,4 +1,4 @@
-package com.acoustic.discoveryserver;
+package com.acoustic;
 
 
 import org.springframework.boot.SpringApplication;
